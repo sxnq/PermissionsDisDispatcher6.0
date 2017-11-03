@@ -46,7 +46,8 @@ public class MainActivity extends Activity {
 
                 //判断，如果没有请求授权 就去请求授权
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-
+                    
+                    ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},1);
 
                     //权限发生了改变 true  //  false 小米
                     if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
